@@ -29,7 +29,7 @@ async def get_value_async(host, port, num_values=10):
 
 
 async def async_main():
-    num_values_per_server = 5 
+    num_values_per_server = 1000
 
     tasks = [get_value_async(HOSTS[i], PORTS[i], num_values_per_server) for i in range(len(HOSTS))]
 

@@ -13,14 +13,13 @@ def get_value(host, port):
         return data_int
 
 def get_average():
-    num_values = 5
+    num_values = 1000
     values = []
 
     for port in PORTS:
         for _ in range(num_values):
             value = get_value(HOST, port)
             values.append(value)
-            print(value)
 
     # Calculate average 
     average = sum(values) / len(values)
